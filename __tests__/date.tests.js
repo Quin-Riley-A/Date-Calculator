@@ -22,8 +22,16 @@ describe('Date', () => {
 
   test("should convert zellerDate into number representing weekday using Zeller's Algorithm", () => {
     const date = new Date('2022-10-01');
+    const date2 = new Date('2022-01-01');
+    const date3 = new Date('2022-02-01');
     date.zellerConvert();
+    date2.zellerConvert();
+    date3.zellerConvert();
     date.zellerCalc();
+    date2.zellerCalc();
+    date3.zellerCalc();
     expect(date.dayValue).toEqual(0);
+    expect(date2.dayValue).toEqual(0);
+    expect(date3.dayValue).toEqual(3);
   });
 });
