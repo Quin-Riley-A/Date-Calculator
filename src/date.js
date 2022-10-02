@@ -6,7 +6,7 @@ export default class Date{
     this.day = dateArr[2];
   };
 
-  dateZeller(){
+  zellerConvert(){
     let intYear = parseInt(this.year);
     if (this.month === "01") {
       this.zellerDate = (intYear - 1) + "-" + "13" + "-" + this.day;
@@ -16,4 +16,8 @@ export default class Date{
       this.zellerDate = this.year + "-" + this.month + "-" + this.day;
     };
   };
+  
+  zellerCalc(){
+
+  }; 
 }
